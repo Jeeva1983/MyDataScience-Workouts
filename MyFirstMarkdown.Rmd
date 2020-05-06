@@ -1,0 +1,27 @@
+---
+title: "MyFirst-R-Markdown"
+author: "Jeeva"
+date: "5/4/2020"
+output: html_document
+---
+
+This is my Firt Markdown document
+
+Let's load some data
+
+
+
+```{r}
+library(datasets)
+data(airquality)
+summary(airquality)
+```
+
+```{r}
+pairs(airquality)
+```
+
+```{r}
+fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
+summary(fit)
+```
